@@ -1,0 +1,170 @@
+@import './main.sass'
+
+.top
+  position: relative
+  height: 120px
+  z-index: 2
+
+.top-mobile
+  position: relative
+  height: 80px
+  z-index: 2
+
+//#######
+// LOGO
+//#######
+.logo
+  display: inline-block
+  width: 120px
+  margin: 30px 0 0 50px
+
+.logo-mobile
+  display: inline-block
+  width: 100px
+  margin: 15px 0 0 20px
+
+//#######
+// MENU
+//#######
+nav
+  position: absolute
+  right: 70px
+  top: 50%
+  transform: translateY(-50%)
+  height: 40px
+  white-space: nowrap
+  line-height: 40px
+  & a
+    font-size: .9em
+  & span
+    color: grey
+
+.menu-item
+  margin: 0 5px
+  display: inline-block
+
+.menu-icon
+  display: block
+  height: 16px
+  transform: translateY(10%)
+
+#menu-mobile-link
+  padding-bottom: 15px !important
+
+.menu-mobile-icon
+  display: inline-block
+  height: 28px
+  margin: 10px
+  &.insta
+    height: 31px
+    margin: 9px 12px
+  &.twitter
+    height: 24px
+    margin: 12px
+  &.mail
+    height: 23px
+    margin: 12px
+
+.icons
+  margin: 0 auto
+  text-align: center
+  padding-bottom: 60px
+
+@keyframes menuLink
+  100%
+    transform: scaleX(100%)
+
+//--------------------------
+// Hamburger Menu
+//--------------------------
+#hambmenu
+  z-index: 10
+  position: absolute
+  right: 30px
+  top: 20px
+  width: 28px
+  height: 35px
+  float: left
+  transition: .5s ease-in-out
+  cursor: pointer
+  user-select: none
+  & span
+    position: absolute
+    height: 3px
+    width: 100%
+    margin: 10px 0 0 0
+    border-radius: 3px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .2s ease-in-out
+    padding: 0px
+#hambmenu  span:nth-child(1)
+  top: 0px
+#hambmenu  span:nth-child(2),#hambmenu  span:nth-child(3)
+  top: 7px
+#hambmenu  span:nth-child(4)
+  top: 14px
+#hambmenu.open span:nth-child(1)
+  top: 18px
+  width: 0%
+  left: 50%
+  opacity: 0
+#hambmenu.open span:nth-child(2)
+  transform: rotate(45deg)
+#hambmenu.open span:nth-child(3)
+  transform: rotate(-45deg)
+#hambmenu.open span:nth-child(4)
+  top: 18px
+  width: 0%
+  left: 50%
+  opacity: 0
+
+//--------------------------
+// Slide In Menu
+//--------------------------
+#menu
+  visibility: hidden
+  position: absolute
+  top: 0
+  height: 100vh
+  width: 100%
+  background-color: rgba(255,255,255,.93)
+  opacity: 0
+  transition: opacity .3s
+  & ul
+    color: $black
+    list-style-type: none
+    text-align: center
+  & li
+    padding-bottom: 30px
+    font-size: 9vw
+  & li:last-child
+    margin-bottom: 20px
+
+li a
+  text-decoration: none
+  animation: colorOut .2s ease-in-out forwards
+  &:hover
+    animation: colorIn .3s ease-in-out forwards
+
+#menu.open
+  visibility: visible
+  opacity: 1
+
+.menu-content
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@keyframes colorIn
+  0%
+    color: $black
+  100%
+    color: grey
+@keyframes colorOut
+  0%
+    color: grey
+  100%
+    color: $black
