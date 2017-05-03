@@ -5,7 +5,7 @@ import Menu from './Menu'
 import MenuMobile from './MenuMobile'
 import Gallery from './Gallery'
 
-const Architecture = (props) => (
+const Architecture = () => (
   <Media query={{maxWidth: 1000}}>
     {matches => matches ? (
       <div>
@@ -20,9 +20,5 @@ const Architecture = (props) => (
     )}
   </Media>
   );
-
-Architecture.propTypes = {
-
-      };
 
 export default Architecture

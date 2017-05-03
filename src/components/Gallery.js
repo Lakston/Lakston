@@ -5,7 +5,6 @@ import store from '../Store'
 import Grid from './Grid'
 import Carousel from './Carousel'
 
-
 export default class Gallery extends Component {
   static propTypes = {
     album: PropTypes.string.isRequired,
@@ -120,9 +119,6 @@ _fullScreen() {
     }
 }
   render() {
-    // const arrayMobile = photoContext.resolve(store[this.state.albumItemsMobile])
-    // const arrayFull = photoContext.resolve(store[this.state.albumItems])
-    // const arrayThumbs = photoContext.resolve(store[this.state.albumThumbnails])
     return (
       <div>
         <Grid images={store[this.state.albumThumbnails]} columns={[ 1, 2, 5 ]} padding={4} onClick={this._handleItemClick}/>

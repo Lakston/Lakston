@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const GridPhoto = ({ url, padding, clickHandler, id }) => {
   const imagesContext = require.context('../', true, /^.*\.jpg$/)
   const styles = {

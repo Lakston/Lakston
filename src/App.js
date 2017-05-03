@@ -7,8 +7,6 @@ import People from './components/People'
 import Architecture from './components/Architecture'
 import About from './components/About'
 
-// require.context("./assets/photos", true)
-
 const App = () => (
 
   <Router history={ history }>
@@ -20,12 +18,5 @@ const App = () => (
     </div>
   </Router>
   );
-
-App.propTypes = {
-
-      };
-
-export default App
-
 
 ReactDOM.render(<App />, document.getElementById('app'));

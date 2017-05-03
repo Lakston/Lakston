@@ -5,7 +5,7 @@ import Menu from './Menu'
 import MenuMobile from './MenuMobile'
 import Gallery from './Gallery'
 
-const People = (props) => (
+const People = () => (
 
     <Media query={{maxWidth: 1000}}>
       {matches => matches ? (
@@ -20,12 +20,6 @@ const People = (props) => (
         </div>
       )}
     </Media>
-
-
   );
-
-People.propTypes = {
-
-      };
 
 export default People
