@@ -8,18 +8,21 @@ const GridItem = ({ gallery, index, columns }) => {
       width: `calc(${100 / columns}% - .5rem)`,
       margin: '0 0.25rem .5rem 0.25rem',
       borderRadius: '2px',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      animation: 'fadeIn .5s ease-in'
     },
     gridItem: {
       width: '100%',
-      paddingBottom: '100%',
-      background: `url(${url}) center center / cover no-repeat`
+      // paddingBottom: '100%',
+      // background: `url(${url}) center center / cover no-repeat`,
+      objectFit: 'cover',
+      height: '100%'
     }
   }
 
   return (
     <div style={styles.container}>
-      <div style={styles.gridItem} />
+      <img src={url} style={styles.gridItem} alt="gallery" />
     </div>
   )
 }
