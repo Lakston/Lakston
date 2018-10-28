@@ -1,6 +1,7 @@
 .gallery-wrapper {
   margin: 150px auto;
   width: 90%;
+  max-width: 1500px;
 }
 
 .gallery {
