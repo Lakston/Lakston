@@ -5,14 +5,15 @@ const GridItem = ({ gallery, index, columns }) => {
 
   const styles = {
     container: {
-      width: `calc(${100 / columns}% - 1rem)`,
-      margin: '0 0.5rem 0.25rem 0.5rem'
+      width: `calc(${100 / columns}% - .5rem)`,
+      margin: '0 0.25rem .5rem 0.25rem',
+      borderRadius: '2px',
+      overflow: 'hidden'
     },
     gridItem: {
       width: '100%',
       paddingBottom: '100%',
-      background: `url(${url}) center center / cover no-repeat`,
-      margin: '.5rem'
+      background: `url(${url}) center center / cover no-repeat`
     }
   }
 
