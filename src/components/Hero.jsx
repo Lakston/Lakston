@@ -6,20 +6,20 @@ function Hero() {
   const large = useMedia('(min-width: 800px)')
   const landscape = useMedia('(orientation: landscape)')
 
-  let format
+  let size
   if (small) {
-    format = landscape ? 'mobile-landscape' : 'mobile'
+    size = landscape ? 'mobile-landscape' : 'mobile'
   } else if (large) {
-    format = 'full'
+    size = 'full'
   } else {
-    format = landscape ? 'tablet-landscape' : 'tablet'
+    size = landscape ? 'tablet-landscape' : 'tablet'
   }
 
-  const imagesContext = process.env.PUBLIC_URL + '/images/hero'
+  const imagesUrl = `${process.env.PUBLIC_URL}/images/hero`
   const randomImage = Math.floor(Math.random() * 3) + 1
-  const url = `${imagesContext}/hero-${format}-${randomImage}.jpg`
+  const url = `${imagesUrl}/hero-${size}-${randomImage}.jpg`
 
-  const heroStyles = {
+  const heroStyle = {
     background: `url(${url}) center center / cover no-repeat fixed`,
     width: '100%',
     height: '100%',
@@ -31,7 +31,7 @@ function Hero() {
 
   return (
     <div>
-      <div className="hero" style={heroStyles} />
+      <div className="hero" style={heroStyle} />
     </div>
   )
 }
