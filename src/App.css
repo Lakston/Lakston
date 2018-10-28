@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Sans:700");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Sans:700');
 :root {
   --white: #f6f6f6;
-  --black: #333
+  --black: #333;
+  --spacer-sm: 10px;
+  --spacer-m: 15px;
+  --spacer-lg: 30px;
 }
 
 @keyframes fadeIn {
@@ -17,8 +20,8 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  overflow-X: hidden;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
   background: #f6f6f6;
 }
 
