@@ -1,0 +1,12 @@
+.gallery-wrapper {
+  margin: 150px auto;
+  width: 90%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: center;
+  margin: -1rem;
+}
