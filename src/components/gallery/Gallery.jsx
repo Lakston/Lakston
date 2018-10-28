@@ -1,7 +1,6 @@
 import React from 'react'
 import useMedia from '../UseMedia'
 import GridItem from './GridItem'
-import './gallery.css'
 
 const Gallery = ({ gallery }) => {
   const galleriesPhotos = { people: 37, places: 39 }
@@ -21,9 +20,26 @@ const Gallery = ({ gallery }) => {
     gridItems.push(<GridItem gallery={gallery} index={i + 1} columns={columns} key={gallery + i} />)
   }
 
+  const styles = {
+    wrapper: {
+      margin: '200px auto',
+      width: '90%',
+      maxWidth: '1400px'
+    },
+    gallery: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'flex-start',
+      textAlign: 'center',
+      margin: '-1rem'
+    }
+  }
+
   return (
-    <div className="gallery-wrapper">
-      <div className="gallery">{gridItems}</div>
+    <div className="gallery-wrapper" style={styles.wrapper}>
+      <div className="gallery" style={styles.gallery}>
+        {gridItems}
+      </div>
     </div>
   )
 }
