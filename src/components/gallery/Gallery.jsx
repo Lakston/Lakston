@@ -4,16 +4,22 @@ import GridItem from './GridItem'
 import './gallery.css'
 
 const Gallery = ({ gallery }) => {
-  const peopleLength = 37
-  const placesLength = 39
-  const isMobile = useMedia('(max-width: 480px)')
+  const galleriesPhotos = { people: 37, places: 39 }
 
-  const gridItems = []
-  for (let i = 0; i < peopleLength; i++) {
-    gridItems.push(<GridItem gallery={gallery} index={i + 1} columns={4} key={gallery + i} />)
+  const isMobile = useMedia('(max-width: 480px)')
+  const isDesktop = useMedia('(min-width: 900px)')
+
+  let columns = 3
+  if (isMobile) {
+    columns = 1
+  } else if (isDesktop) {
+    columns = 4
   }
 
-  console.log(gridItems)
+  const gridItems = []
+  for (let i = 0; i < galleriesPhotos[gallery]; i++) {
+    gridItems.push(<GridItem gallery={gallery} index={i + 1} columns={columns} key={gallery + i} />)
+  }
 
   return (
     <div className="gallery-wrapper">
