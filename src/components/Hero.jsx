@@ -3,7 +3,7 @@ import useMedia from './UseMedia'
 
 function Hero() {
   const small = useMedia('(max-width: 480px)')
-  const large = useMedia('(min-width: 800px)')
+  const large = useMedia('(min-width: 900px)')
   const landscape = useMedia('(orientation: landscape)')
 
   let size
