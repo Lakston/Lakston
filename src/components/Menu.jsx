@@ -8,7 +8,7 @@ import './menu.css'
 import Logo from '../assets/logo.svg'
 import LogoBlack from '../assets/logo-black.svg'
 
-const Menu = ({ color }) => {
+const Menu = ({ color = 'black' }) => {
   const activeClass = { fontWeight: 'bold' }
   const menuColor = color === 'black' ? { color: 'grey' } : { color: '#efefef' }
   return (
