@@ -5,10 +5,11 @@ header {
   align-items: center;
   top: 0;
   left: 0;
-  height: 100px;
+  height: 80px;
   width: 100vw;
   z-index: 2;
   padding: 0 30px;
+  background-color: var(--white);
 }
 
 .top-mobile {
