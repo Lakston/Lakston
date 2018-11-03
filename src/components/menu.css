@@ -5,7 +5,7 @@ header {
   align-items: center;
   top: 0;
   left: 0;
-  height: 80px;
+  height: var(--menu-height);
   width: 100vw;
   z-index: 2;
   padding: 0 30px;
@@ -18,7 +18,7 @@ header {
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
 }
 
 .logo-mobile {
@@ -188,54 +188,9 @@ li a:hover {
   transform: translate(-50%, -50%);
 }
 
-@-moz-keyframes menuLink {
-  100% {
-    transform: scaleX(100%);
-  }
-}
-
-@-webkit-keyframes menuLink {
-  100% {
-    transform: scaleX(100%);
-  }
-}
-
-@-o-keyframes menuLink {
-  100% {
-    transform: scaleX(100%);
-  }
-}
-
 @keyframes menuLink {
   100% {
     transform: scaleX(100%);
-  }
-}
-
-@-moz-keyframes colorIn {
-  0% {
-    color: var(--black);
-  }
-  100% {
-    color: #808080;
-  }
-}
-
-@-webkit-keyframes colorIn {
-  0% {
-    color: var(--black);
-  }
-  100% {
-    color: #808080;
-  }
-}
-
-@-o-keyframes colorIn {
-  0% {
-    color: var(--black);
-  }
-  100% {
-    color: #808080;
   }
 }
 
@@ -245,33 +200,6 @@ li a:hover {
   }
   100% {
     color: #808080;
-  }
-}
-
-@-moz-keyframes colorOut {
-  0% {
-    color: #808080;
-  }
-  100% {
-    color: var(--black);
-  }
-}
-
-@-webkit-keyframes colorOut {
-  0% {
-    color: #808080;
-  }
-  100% {
-    color: var(--black);
-  }
-}
-
-@-o-keyframes colorOut {
-  0% {
-    color: #808080;
-  }
-  100% {
-    color: var(--black);
   }
 }
 
