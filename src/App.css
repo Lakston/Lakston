@@ -5,6 +5,7 @@
   --spacer-sm: 10px;
   --spacer-m: 15px;
   --spacer-lg: 30px;
+  --menu-height: 60px;
 }
 
 @keyframes fadeIn {
