@@ -13,8 +13,6 @@ const GridItem = ({ gallery, index, columns }) => {
     },
     gridItem: {
       width: '100%',
-      // paddingBottom: '100%',
-      // background: `url(${url}) center center / cover no-repeat`,
       objectFit: 'cover',
       height: '100%'
     }
